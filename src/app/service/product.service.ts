@@ -7,8 +7,8 @@ import { ProductCardComponent } from '../common/product-card/product-card.compon
 })
 export class ProductService {
 
-  constructor() { 
-    let list : Array <{id, catId, name, description, image, price, stock, featured, active}> =
+  
+  list : Product [] =
     [{
       id: 1,
       catId: 1001,
@@ -509,6 +509,13 @@ export class ProductService {
       stock: 41,
       featured: true,
       active: false
-    }]
+    }];
+
+    constructor() { }
+  
+  removeProduct (product: Product):void {
+    const index = this.list.findIndex( item => item.id === product.id);
+    this.list.splice(index, 1);
   }
 }
+
