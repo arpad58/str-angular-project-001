@@ -7,7 +7,7 @@ import { Category } from '../model/category';
 export class CategoryService {
 
   list: Category[] = [
-    {id: 1, name: 'cars', description: 'Cars'}
+    {id: 1, name: 'cars', description: 'Cars'},
     {id: 2, name: 'vans', description: 'Vans'}
   ];
 
